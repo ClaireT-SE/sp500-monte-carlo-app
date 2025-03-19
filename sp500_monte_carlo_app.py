@@ -11,7 +11,7 @@ st.title("S&P 500 Monte Carlo Simulation")
 @st.cache_data  # Cache the data to improve performance
 def load_data():
     # Replace with the path to your CSV file
-    data = pd.read_csv(r'C:\users\thomp\Downloads\S&P 500 Historical Data.csv', parse_dates=['Date'])
+    data = pd.read_csv('S&P 500 Historical Data.csv', parse_dates=['Date'])
     # Ensure the 'Price' column is numeric
     data['Price'] = data['Price'].replace('[\$,]', '', regex=True).astype(float)
     return data
